@@ -1,0 +1,69 @@
+system,removed_rule,accuracy,macro_f1,unclassified_pct,silently_wrong_pct
+Hierarchical,P1,0.9225,0.8552,0.0,7.7457
+Hierarchical,P2,0.9468,0.8712,0.0,5.3179
+Hierarchical,P3,0.8555,0.7232,4.0462,10.4046
+Hierarchical,P4,0.8763,0.741,4.5087,7.8613
+Hierarchical,P5,0.9434,0.8121,1.7341,3.9306
+Hierarchical,P6,0.9376,0.7829,2.4277,3.815
+Hierarchical,P7,0.941,0.7996,2.0809,3.815
+Hierarchical,C1,0.7803,0.8438,18.0347,3.9306
+Hierarchical,C2,0.9561,0.8775,0.0,4.3931
+Hierarchical,C3,0.8936,0.6711,0.0,10.6358
+Hierarchical,C4,0.8139,0.7602,16.8786,1.7341
+Hierarchical,T1,0.7827,0.8444,17.8035,3.9306
+Hierarchical,T2,0.7711,0.8417,18.9595,3.9306
+Hierarchical,T3,0.8798,0.6403,8.9017,3.1214
+Hierarchical,T4,0.8879,0.7899,8.2081,3.0058
+Hierarchical,T5,0.8798,0.7695,9.0173,3.0058
+Hierarchical,T6,0.8867,0.8572,8.6705,2.659
+Hierarchical,K1,0.4971,0.7573,46.3584,3.9306
+Hierarchical,K2,0.8902,0.8581,5.2023,5.7803
+Hierarchical,K3,0.9341,0.6754,2.659,3.9306
+Hierarchical,K4,0.9064,0.8457,6.2428,3.1214
+Hierarchical,K5,0.9225,0.682,5.5491,2.1965
+Hierarchical,K6,0.8451,0.7815,11.6763,3.815
+Hierarchical,K7,0.9341,0.8641,2.8902,3.6994
+Hierarchical,C5,0.9295,0.7762,0.0,7.052
+Hierarchical,K8,0.9237,0.8575,0.0,7.6301
+Flat,F1,0.9607,0.8808,0.0,3.9306
+Flat,F2,0.9607,0.8808,0.0,3.9306
+Flat,F3,0.9225,0.8552,0.0,7.7457
+Flat,F4,0.9468,0.8712,0.0,5.3179
+Flat,F5,0.9561,0.8775,0.0,4.3931
+Flat,F6,0.9445,0.7539,0.0,5.5491
+Flat,F7,0.9491,0.8231,0.0,5.0867
+Flat,F8,0.7642,0.6204,0.0,23.5838
+Flat,F9,0.9422,0.868,0.0,5.7803
+Flat,F10,0.9561,0.8779,0.0,4.3931
+Flat,F11,0.9549,0.8771,0.0,4.5087
+Flat,F12,0.9595,0.8802,0.0,4.0462
+Flat,F13,0.9514,0.8317,0.0,4.8555
+Flat,F14,0.9584,0.8678,0.0,4.1618
+Flat,F15,0.9503,0.8049,0.0,4.9711
+Flat,F0,0.9607,0.8808,0.0,3.9306
+Hierarchical + default,P1,0.9225,0.8552,0.0,7.7457
+Hierarchical + default,P2,0.9468,0.8712,0.0,5.3179
+Hierarchical + default,P3,0.8555,0.7162,0.0,14.4509
+Hierarchical + default,P4,0.8763,0.7333,0.0,12.3699
+Hierarchical + default,P5,0.9434,0.8091,0.0,5.6647
+Hierarchical + default,P6,0.9376,0.7787,0.0,6.2428
+Hierarchical + default,P7,0.941,0.796,0.0,5.896
+Hierarchical + default,C1,0.9607,0.8808,0.0,3.9306
+Hierarchical + default,C2,0.9561,0.8775,0.0,4.3931
+Hierarchical + default,C3,0.8936,0.6711,0.0,10.6358
+Hierarchical + default,C4,0.8613,0.749,0.0,13.8728
+Hierarchical + default,T1,0.9607,0.8808,0.0,3.9306
+Hierarchical + default,T2,0.9607,0.8808,0.0,3.9306
+Hierarchical + default,T3,0.8798,0.6256,0.0,12.0231
+Hierarchical + default,T4,0.8879,0.7762,0.0,11.2139
+Hierarchical + default,T5,0.8798,0.7545,0.0,12.0231
+Hierarchical + default,T6,0.9341,0.8591,0.0,6.5896
+Hierarchical + default,K1,0.9607,0.8808,0.0,3.9306
+Hierarchical + default,K2,0.9422,0.868,0.0,5.7803
+Hierarchical + default,K3,0.9341,0.6708,0.0,6.5896
+Hierarchical + default,K4,0.9064,0.8352,0.0,9.3642
+Hierarchical + default,K5,0.9225,0.6726,0.0,7.7457
+Hierarchical + default,K6,0.8451,0.7625,0.0,15.4913
+Hierarchical + default,K7,0.9341,0.8591,0.0,6.5896
+Hierarchical + default,C5,0.9295,0.7762,0.0,7.052
+Hierarchical + default,K8,0.9237,0.8575,0.0,7.6301

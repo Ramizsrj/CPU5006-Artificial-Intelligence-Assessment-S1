@@ -1,0 +1,31 @@
+===== Hierarchical system (version 2) =====
+Input: {'buying': 'low', 'maint': 'med', 'doors': '4', 'persons': 'more', 'lug_boot': 'big', 'safety': 'high'}
+  1. C3: IF persons in ['4', 'more'] AND lug_boot = big THEN comfort = high
+       because: a big boot gives high comfort regardless of the number of doors
+  2. T3: IF safety = high AND comfort = high THEN tech = excellent
+  3. P6: IF maint = med THEN price = medium
+       because: moderate maintenance
+  4. K3: IF tech = excellent AND price in ['low', 'medium'] THEN class = vgood
+Conclusion: class = vgood
+
+Input: {'buying': 'high', 'maint': 'med', 'doors': '2', 'persons': '4', 'lug_boot': 'small', 'safety': 'med'}
+  1. P3: IF buying in ['high', 'vhigh'] THEN price = high
+       because: an expensive purchase price makes the overall price high
+  2. C4: IF persons in ['4', 'more'] THEN comfort = medium
+       because: carries a family but has some practical limitation
+  3. T6: IF safety = med AND comfort = medium THEN tech = acceptable
+  4. K8: IF tech = acceptable AND price = high THEN class = unacc
+       because: merely acceptable technology does not justify a high price
+Conclusion: class = unacc
+
+===== Flat system (version 2) =====
+Input: {'buying': 'low', 'maint': 'med', 'doors': '4', 'persons': 'more', 'lug_boot': 'big', 'safety': 'high'}
+  1. F6: IF safety = high AND lug_boot = big AND persons in ['4', 'more'] AND buying in ['low', 'med'] AND maint in ['low', 'med'] THEN class = vgood
+       because: safe, roomy and cheap
+Conclusion: class = vgood
+
+Input: {'buying': 'high', 'maint': 'med', 'doors': '2', 'persons': '4', 'lug_boot': 'small', 'safety': 'med'}
+  1. F9: IF safety = med AND lug_boot = small AND buying in ['high', 'vhigh'] THEN class = unacc
+       because: adequate car, too expensive to buy
+Conclusion: class = unacc
+

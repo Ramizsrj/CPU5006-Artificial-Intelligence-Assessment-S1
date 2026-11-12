@@ -1,0 +1,5 @@
+comparison,A_right_B_wrong,A_wrong_B_right,p_value,prediction_agreement
+"A = Hierarchical v1, B = Flat v1",20,49,0.0006,0.9145
+"A = Hierarchical v2, B = Flat v2",0,0,1.0,1.0
+"A = Hierarchical v2, B = Hierarchical v1",99,10,<0.0001,
+"A = Flat v2, B = Flat v1",76,16,<0.0001,

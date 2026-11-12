@@ -1,0 +1,5 @@
+system,version,rules_total,rules_concluding_class,rules_intermediate,conditions_total,conditions_per_rule,max_conditions_in_a_rule,rules_changed_or_added_in_v2,rules_fired_per_case,cases_with_conflict_pct,cases_with_contradiction_pct,cases_decided_by_default_pct,rules_never_fired
+Hierarchical,1,24,7,17,38,1.5833,3,0,4,74.0741,59.375,0.0,0
+Hierarchical,2,26,8,18,43,1.6538,3,5,4,79.456,67.2454,0.0,0
+Flat,1,9,9,0,19,2.1111,5,0,1,38.8889,16.4352,0.0,1
+Flat,2,16,16,0,51,3.1875,6,8,1,46.9907,23.669,0.0,1

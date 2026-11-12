@@ -1,0 +1,63 @@
+===== Hierarchical knowledge base (version 2) =====
+[priority 3] P1: IF buying = vhigh AND maint in ['high', 'vhigh'] THEN price = very_high
+[priority 3] P2: IF buying = high AND maint = vhigh THEN price = very_high
+[priority 2] P3: IF buying in ['high', 'vhigh'] THEN price = high
+[priority 2] P4: IF maint in ['high', 'vhigh'] THEN price = high
+[priority 1] P5: IF buying = med THEN price = medium
+[priority 1] P6: IF maint = med THEN price = medium
+[priority 1] P7: IF buying = low AND maint = low THEN price = low
+[priority 2] C1: IF persons = 2 THEN comfort = low
+[priority 2] C2: IF doors = 2 AND lug_boot = small AND persons = more THEN comfort = low
+[priority 1] C3: IF persons in ['4', 'more'] AND lug_boot = big THEN comfort = high
+[priority 0] C4: IF persons in ['4', 'more'] THEN comfort = medium
+[priority 2] T1: IF safety = low THEN tech = unacceptable
+[priority 2] T2: IF comfort = low THEN tech = unacceptable
+[priority 1] T3: IF safety = high AND comfort = high THEN tech = excellent
+[priority 1] T4: IF safety = high AND comfort = medium THEN tech = good
+[priority 1] T5: IF safety = med AND comfort = high THEN tech = good
+[priority 1] T6: IF safety = med AND comfort = medium THEN tech = acceptable
+[priority 3] K1: IF tech = unacceptable THEN class = unacc
+[priority 3] K2: IF price = very_high THEN class = unacc
+[priority 1] K3: IF tech = excellent AND price in ['low', 'medium'] THEN class = vgood
+[priority 1] K4: IF tech = excellent AND price = high THEN class = acc
+[priority 1] K5: IF tech = good AND price in ['low', 'medium'] THEN class = good
+[priority 1] K6: IF tech = good AND price = high THEN class = acc
+[priority 1] K7: IF tech = acceptable THEN class = acc
+[priority 1] C5: IF persons in ['4', 'more'] AND lug_boot = med AND doors in ['4', '5more'] THEN comfort = high
+[priority 2] K8: IF tech = acceptable AND price = high THEN class = unacc
+
+Refinements made from development-set errors:
+  - C2 (replaced C2): Dev errors: 2-door/small-boot/4-seat cars were rated acc/good, not unacc; the veto was too broad.
+  - C3 (replaced C3): Dev errors: big-boot 2/3-door cars were under-rated (vgood->good, good->acc).
+  - C5 (added): Keeps the medium-boot part of the original C3.
+  - K4 (replaced K4): Dev errors: 30 acc cars predicted good via K4.
+  - K8 (added): Dev errors: 34 unacc cars predicted acc via K7.
+
+===== Flat knowledge base (version 2) =====
+[priority 3] F1: IF safety = low THEN class = unacc
+[priority 3] F2: IF persons = 2 THEN class = unacc
+[priority 3] F3: IF buying = vhigh AND maint in ['high', 'vhigh'] THEN class = unacc
+[priority 3] F4: IF buying = high AND maint = vhigh THEN class = unacc
+[priority 3] F5: IF doors = 2 AND lug_boot = small AND persons = more THEN class = unacc
+[priority 2] F6: IF safety = high AND lug_boot = big AND persons in ['4', 'more'] AND buying in ['low', 'med'] AND maint in ['low', 'med'] THEN class = vgood
+[priority 1] F7: IF safety = high AND persons in ['4', 'more'] AND buying in ['low', 'med'] AND maint in ['low', 'med'] THEN class = good
+[priority 0] F8: IF safety in ['high', 'med'] AND persons in ['4', 'more'] THEN class = acc
+[priority 2] F9: IF safety = med AND lug_boot = small AND buying in ['high', 'vhigh'] THEN class = unacc
+[priority 2] F10: IF safety = med AND lug_boot = small AND maint in ['high', 'vhigh'] THEN class = unacc
+[priority 2] F11: IF safety = med AND lug_boot = med AND doors in ['2', '3'] AND buying in ['high', 'vhigh'] THEN class = unacc
+[priority 2] F12: IF safety = med AND lug_boot = med AND doors in ['2', '3'] AND maint in ['high', 'vhigh'] THEN class = unacc
+[priority 1] F13: IF safety = med AND persons in ['4', 'more'] AND lug_boot = big AND buying in ['low', 'med'] AND maint in ['low', 'med'] THEN class = good
+[priority 1] F14: IF safety = med AND persons in ['4', 'more'] AND lug_boot = med AND doors in ['4', '5more'] AND buying in ['low', 'med'] AND maint in ['low', 'med'] THEN class = good
+[priority 2] F15: IF safety = high AND persons in ['4', 'more'] AND lug_boot = med AND doors in ['4', '5more'] AND buying in ['low', 'med'] AND maint in ['low', 'med'] THEN class = vgood
+[priority -1] F0: IF TRUE THEN class = unacc
+
+Refinements made from development-set errors:
+  - F5 (replaced F5): Dev errors: 2-door/small-boot/4-seat cars were acc/good, not unacc.
+  - F9 (added): Dev errors: 34 unacc cars predicted acc via F8.
+  - F10 (added): 
+  - F11 (added): 
+  - F12 (added): 
+  - F13 (added): Dev errors: 19 good cars predicted acc via F8.
+  - F14 (added): 
+  - F15 (added): Dev errors: vgood cars with medium boot predicted good via F7.
+
